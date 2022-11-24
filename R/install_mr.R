@@ -15,7 +15,7 @@ install_mr <- function(){
 
   remotes::install_github("MRCIEU/TwoSampleMR")
   devtools::install_github("kexhong/MendelR",
-                           auth_token = "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",
+                           auth_token = "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",
                            force = TRUE, quiet=TRUE)
 
   library(TwoSampleMR)
