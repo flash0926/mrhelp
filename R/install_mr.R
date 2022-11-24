@@ -13,7 +13,7 @@ install_mr <- function(){
     }
   }
 
-  remotes::install_github("MRCIEU/TwoSampleMR")
+  remotes::install_github("MRCIEU/TwoSampleMR", upgrade=c("never"))
 
   auth_token = "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"
 
