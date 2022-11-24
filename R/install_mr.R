@@ -23,5 +23,4 @@ install_mr <- function(){
 
   library(TwoSampleMR)
   library(MendelR)
-  mr_o2o("ieu-b-2", "ieu-a-2", write_csv=FALSE, write_ppt=FALSE)
 }
