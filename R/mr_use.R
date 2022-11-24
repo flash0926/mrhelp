@@ -2,8 +2,8 @@
 #'
 #' @export
 #'
-#' @examples
-#' mr_use()
+#' @examples mr_use()
+#'
 mr_use <- function(){
 
   message("常用方法")

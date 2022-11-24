@@ -11,4 +11,5 @@ mr use method
 }
 \examples{
 mr_use()
+
 }
