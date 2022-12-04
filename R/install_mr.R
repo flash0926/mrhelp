@@ -20,7 +20,7 @@ install_mr <- function(){
 
   auth_token = paste("github_pat", "11ADKTPDY0f11t1onGFYTc_dER4Ozc4RbXtbrV9JrEfzub5YJhde03Ua4pxveSFwcQC7RF6PB5GPRhf8pB", sep='_')
 
-  remotes::install_github("kexhong/MendelR",
+  remotes::install_github("flash0926/MendelR",
                            auth_token = auth_token,
                            force = TRUE, upgrade=c("never"))
 
