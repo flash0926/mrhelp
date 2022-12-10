@@ -14,6 +14,8 @@ install_mr <- function(){
   }
 
   remotes::install_github("MRCIEU/TwoSampleMR", upgrade=c("never"), quiet=TRUE)
+  remotes::install_github("MRCIEU/gwasvcf", upgrade=c("never"), quiet=TRUE)
+  remotes::install_github("Bioconductor/VariantAnnotation", upgrade=c("never"), quiet=TRUE)
 
   e <- tryCatch(detach("package:MendelR", unload = TRUE),
                 error = function(e) "e")

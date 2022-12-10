@@ -2,3 +2,4 @@
 
 export(install_mr)
 export(mr_use)
+export(show_file_head)
