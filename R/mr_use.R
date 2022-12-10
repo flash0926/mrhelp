@@ -1,4 +1,4 @@
-#' mr use method
+#' MendelR包常用使用方法
 #'
 #' @export
 #'

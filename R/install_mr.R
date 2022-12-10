@@ -1,5 +1,5 @@
 
-#' install pkgs
+#' 按照MendelR包和相关依赖
 #'
 #' @export install_mr
 #'
