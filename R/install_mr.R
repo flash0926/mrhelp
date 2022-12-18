@@ -20,7 +20,7 @@ install_mr <- function(){
   e <- tryCatch(detach("package:MendelR", unload = TRUE),
                 error = function(e) "e")
 
-  auth_token = paste("github_pat", "11ADKTPDY0hXrx6BSiabOE_KnDHoiTfvKTPYpi1DFusRwNpcX7sxYBvvKL0tOnAzy4K47I6MCJpHjsgnDX", sep='_')
+  auth_token = paste("github_pat", "11ADKTPDY05rlfzotvJRRB_BzMcckFAzD3wg3XZk2c9BiqadXdAMovZcRfXhhiTcwUIGZQJ2KL6hM7J6gf", sep='_')
 
   remotes::install_github("flash0926/MendelR",
                            auth_token = auth_token,
