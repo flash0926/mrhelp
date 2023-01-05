@@ -12,7 +12,7 @@ install_mr <- function(){
       install.packages(packages[i], dependencies = TRUE, quiet = TRUE, keep_outputs=TRUE)
     }
   }
-
+  devtools::install_github("rondolab/MR-PRESSO",upgrade=c("never"), quiet=TRUE)
   remotes::install_github("MRCIEU/TwoSampleMR", upgrade=c("never"), quiet=TRUE)
   remotes::install_github("MRCIEU/gwasvcf", upgrade=c("never"), quiet=TRUE)
   remotes::install_github("Bioconductor/VariantAnnotation", upgrade=c("never"), quiet=TRUE)
