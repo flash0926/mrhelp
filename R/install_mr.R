@@ -5,7 +5,7 @@
 #'
 #' @examples install_mr()
 install_mr <- function(){
-  packages <- c("usethis", "devtools", "remotes", "data.table", "do", "eoffice","meta")
+  packages <- c("usethis", "devtools", "remotes", "data.table", "do", "eoffice")
 
   for (i in 1:length(packages)) {
     if (!packages[i] %in% installed.packages()[,"Package"]) {
@@ -13,6 +13,7 @@ install_mr <- function(){
     }
   }
   devtools::install_github("rondolab/MR-PRESSO",upgrade=c("never"), quiet=TRUE)
+  remotes::install_github("guido-s/meta", ref = "develop", upgrade=c("never"), quiet=TRUE)
   remotes::install_github("MRCIEU/TwoSampleMR", upgrade=c("never"), quiet=TRUE)
   remotes::install_github("MRCIEU/gwasvcf", upgrade=c("never"), quiet=TRUE)
   remotes::install_github("Bioconductor/VariantAnnotation", upgrade=c("never"), quiet=TRUE)
