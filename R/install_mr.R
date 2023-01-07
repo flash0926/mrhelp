@@ -5,7 +5,7 @@
 #'
 #' @examples install_mr()
 install_mr <- function(){
-  packages <- c("usethis", "devtools", "remotes", "data.table", "do", "eoffice")
+  packages <- c("usethis", "devtools", "remotes", "data.table", "do", "eoffice","meta")
 
   for (i in 1:length(packages)) {
     if (!packages[i] %in% installed.packages()[,"Package"]) {
