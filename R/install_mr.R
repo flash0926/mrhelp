@@ -18,6 +18,10 @@ install_mr <- function(){
   remotes::install_github("MRCIEU/gwasvcf", upgrade=c("never"), quiet=TRUE)
   remotes::install_github("Bioconductor/VariantAnnotation", upgrade=c("never"), quiet=TRUE)
 
+  #卸载后重新安装
+  (path <- .libPaths()[sapply(.libPaths(), function(i) "MendelR" %in%
+                                list.files(i))])
+  unlink(paste0(path, "/", "MendelR"), force = TRUE, recursive = TRUE)
   e <- tryCatch(detach("package:MendelR", unload = TRUE),
                 error = function(e) "e")
 
