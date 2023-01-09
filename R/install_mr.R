@@ -12,9 +12,16 @@ install_mr <- function(){
       install.packages(packages[i], dependencies = TRUE, quiet = TRUE, keep_outputs=TRUE)
     }
   }
-  devtools::install_github("rondolab/MR-PRESSO",upgrade=c("never"), quiet=TRUE)
-  remotes::install_github("guido-s/meta", ref = "develop", upgrade=c("never"), quiet=TRUE)
-  remotes::install_github("MRCIEU/TwoSampleMR", upgrade=c("never"), quiet=TRUE)
+  if (!"MRPRESSO" %in% installed.packages()[,"Package"]) {
+    devtools::install_github("rondolab/MR-PRESSO",upgrade=c("never"), quiet=TRUE)
+  }
+  if (!"meta" %in% installed.packages()[,"Package"]) {
+    devtools::install_github("guido-s/meta",upgrade=c("never"), quiet=TRUE)
+  }
+  if (!"TwoSampleMR" %in% installed.packages()[,"Package"]) {
+    devtools::install_github("MRCIEU/TwoSampleMR",upgrade=c("never"), quiet=TRUE)
+  }
+
   #remotes::install_github("MRCIEU/gwasvcf", upgrade=c("never"), quiet=TRUE)
   #remotes::install_github("Bioconductor/VariantAnnotation", upgrade=c("never"), quiet=TRUE)
 
