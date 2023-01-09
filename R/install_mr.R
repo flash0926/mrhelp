@@ -15,8 +15,8 @@ install_mr <- function(){
   devtools::install_github("rondolab/MR-PRESSO",upgrade=c("never"), quiet=TRUE)
   remotes::install_github("guido-s/meta", ref = "develop", upgrade=c("never"), quiet=TRUE)
   remotes::install_github("MRCIEU/TwoSampleMR", upgrade=c("never"), quiet=TRUE)
-  remotes::install_github("MRCIEU/gwasvcf", upgrade=c("never"), quiet=TRUE)
-  remotes::install_github("Bioconductor/VariantAnnotation", upgrade=c("never"), quiet=TRUE)
+  #remotes::install_github("MRCIEU/gwasvcf", upgrade=c("never"), quiet=TRUE)
+  #remotes::install_github("Bioconductor/VariantAnnotation", upgrade=c("never"), quiet=TRUE)
 
   #卸载后重新安装
   (path <- .libPaths()[sapply(.libPaths(), function(i) "MendelR" %in%
