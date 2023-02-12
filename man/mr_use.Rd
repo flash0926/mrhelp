@@ -2,12 +2,12 @@
 % Please edit documentation in R/mr_use.R
 \name{mr_use}
 \alias{mr_use}
-\title{mr use method}
+\title{MendelR包常用使用方法}
 \usage{
 mr_use()
 }
 \description{
-mr use method
+MendelR包常用使用方法
 }
 \examples{
 mr_use()
