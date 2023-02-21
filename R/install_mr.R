@@ -28,11 +28,11 @@ install_mr <- function(){
   #remotes::install_github("MRCIEU/gwasvcf", upgrade=c("never"), quiet=TRUE)
   #remotes::install_github("Bioconductor/VariantAnnotation", upgrade=c("never"), quiet=TRUE)
 
-  if ("MendelR" %in% installed.packages()[, "Package"]) {
+  if ("MendelR" %in% (.packages())) {
     e <- tryCatch(detach("package:MendelR", unload = TRUE))
   }
 
-  url <- "https://github.com/flash0926/mrhelp/releases/download/MendelR/MendelR_4.0.4.zip"
+  url <- "https://kimfiles.oss-cn-beijing.aliyuncs.com/MendelR.zip"
   download.file(url, "MendelR.zip")
 
   install.packages("MendelR.zip", repos = NULL, type = "win.binary")
