@@ -32,10 +32,38 @@ install_mr <- function(){
     e <- tryCatch(detach("package:MendelR", unload = TRUE))
   }
 
-  url <- "https://kimfiles.oss-cn-beijing.aliyuncs.com/MendelR.zip"
-  download.file(url, "MendelR.zip")
+  check_and_download()
 
-  install.packages("MendelR.zip", repos = NULL, type = "win.binary")
-
+  if("MendelR" %in% installed.packages()[,"Package"]){
+    message("下载并安装成功")
+  }else{
+    message("下载失败")
+    message("可以自行打开链接下载安装 ")
+    message(get_download_url())
+  }
   library(MendelR)
+}
+check_and_download <- function(){
+  url <- get_download_url()
+  name <- ""
+  if(.Platform$OS.type == "windows"){
+    name <- "MendelR.zip"
+  }else{
+    name <- "MendelR.tar.gz"
+  }
+  if(file.exists(name)){
+    file.remove(name)
+  }
+  download.file(url, name)
+  install.packages(name, repos = NULL)
+}
+
+get_download_url <- function(){
+  url <- ""
+  if(.Platform$OS.type == "windows"){
+    url <- "https://kimfiles.oss-cn-beijing.aliyuncs.com/MendelR.zip"
+  }else{
+    url <- "https://kimfiles.oss-cn-beijing.aliyuncs.com/MendelR.tar.gz"
+  }
+  return(url)
 }
