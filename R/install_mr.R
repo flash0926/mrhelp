@@ -21,9 +21,9 @@ install_mr <- function(){
   if (!"TwoSampleMR" %in% installed.packages()[,"Package"]) {
     devtools::install_github("MRCIEU/TwoSampleMR",upgrade=c("never"), quiet=TRUE)
   }
-  if(!"MVMR" %in% installed.packages()[,"Package"]){
-    devtools::install_github("WSpiller/MVMR", build_opts = c("--no-resave-data", "--no-manual"), build_vignettes = TRUE)
-  }
+  #if(!"MVMR" %in% installed.packages()[,"Package"]){
+  #  devtools::install_github("WSpiller/MVMR", build_opts = c("--no-resave-data", "--no-manual"), build_vignettes = TRUE)
+  #}
 
   #remotes::install_github("MRCIEU/gwasvcf", upgrade=c("never"), quiet=TRUE)
   #remotes::install_github("Bioconductor/VariantAnnotation", upgrade=c("never"), quiet=TRUE)
