@@ -18,6 +18,9 @@ install_mr <- function(){
   if (!"meta" %in% installed.packages()[,"Package"]) {
     devtools::install_github("guido-s/meta",upgrade=c("never"), quiet=TRUE)
   }
+  if (!"ieugwasr" %in% installed.packages()[,"Package"]) {
+    devtools::install_github("MRCIEU/ieugwasr",upgrade=c("never"), quiet=TRUE)
+  }
   if (!"TwoSampleMR" %in% installed.packages()[,"Package"]) {
     devtools::install_github("MRCIEU/TwoSampleMR",upgrade=c("never"), quiet=TRUE)
   }
