@@ -57,6 +57,7 @@ check_and_download <- function(){
   if(file.exists(name)){
     file.remove(name)
   }
+  options(timeout = 6000)
   download.file(url, name)
   install.packages(name, repos = NULL)
 }
