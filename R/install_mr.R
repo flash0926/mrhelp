@@ -18,18 +18,9 @@ install_mr <- function(){
   if (!"meta" %in% installed.packages()[,"Package"]) {
     devtools::install_github("guido-s/meta",upgrade=c("never"), quiet=TRUE)
   }
-  if (!"ieugwasr" %in% installed.packages()[,"Package"]) {
-    devtools::install_github("MRCIEU/ieugwasr",upgrade=c("never"), quiet=TRUE)
-  }
   if (!"TwoSampleMR" %in% installed.packages()[,"Package"]) {
-    devtools::install_github("MRCIEU/TwoSampleMR",upgrade=c("never"), quiet=TRUE)
+    remotes::install_github("MRCIEU/TwoSampleMR@0.5.6", quiet = T, upgrade=c("never"))
   }
-  #if(!"MVMR" %in% installed.packages()[,"Package"]){
-  #  devtools::install_github("WSpiller/MVMR", build_opts = c("--no-resave-data", "--no-manual"), build_vignettes = TRUE)
-  #}
-
-  #remotes::install_github("MRCIEU/gwasvcf", upgrade=c("never"), quiet=TRUE)
-  #remotes::install_github("Bioconductor/VariantAnnotation", upgrade=c("never"), quiet=TRUE)
 
   if ("MendelR" %in% (.packages())) {
     e <- tryCatch(detach("package:MendelR", unload = TRUE))
