@@ -19,7 +19,10 @@ install_mr <- function(){
     remotes::install_git("https://gitcode.com/guido-s/meta",upgrade=c("never"), quiet=TRUE)
   }
   if (!"TwoSampleMR" %in% installed.packages()[,"Package"]) {
-    remotes::install_git("https://gitcode.com/MRCIEU/TwoSampleMR", quiet = T, upgrade=c("never"))
+
+  }
+  if (!"MVMR" %in% installed.packages()[,"Package"]){
+    remotes::install_git("https://gitcode.com/WSpiller/MVMR", quiet = T, upgrade=c("never"))
   }
 
   if ("MendelR" %in% (.packages())) {
