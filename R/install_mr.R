@@ -13,13 +13,13 @@ install_mr <- function(){
     }
   }
   if (!"MRPRESSO" %in% installed.packages()[,"Package"]) {
-    devtools::install_github("rondolab/MR-PRESSO",upgrade=c("never"), quiet=TRUE)
+    remotes::install_git("https://gitcode.com/rondolab/MR-PRESSO",upgrade=c("never"), quiet=TRUE)
   }
   if (!"meta" %in% installed.packages()[,"Package"]) {
-    devtools::install_github("guido-s/meta",upgrade=c("never"), quiet=TRUE)
+    remotes::install_git("https://gitcode.com/guido-s/meta",upgrade=c("never"), quiet=TRUE)
   }
   if (!"TwoSampleMR" %in% installed.packages()[,"Package"]) {
-    remotes::install_github("MRCIEU/TwoSampleMR@0.5.6", quiet = T, upgrade=c("never"))
+    remotes::install_git("https://gitcode.com/MRCIEU/TwoSampleMR", quiet = T, upgrade=c("never"))
   }
 
   if ("MendelR" %in% (.packages())) {
