@@ -21,7 +21,6 @@ install_mr <- function(){
   if (!"TwoSampleMR" %in% installed.packages()[,"Package"]) {
     remotes::install_git("https://gitcode.com/MRCIEU/TwoSampleMR", quiet = T, upgrade=c("never"))
   }
-
   if (!"MVMR" %in% installed.packages()[,"Package"]){
     remotes::install_git("https://gitcode.com/WSpiller/MVMR", quiet = T, upgrade=c("never"))
   }
