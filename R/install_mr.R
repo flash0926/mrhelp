@@ -13,19 +13,19 @@ install_mr <- function(){
     }
   }
   if (!"MRPRESSO" %in% installed.packages()[,"Package"]) {
-    remotes::install_git("https://gitcode.com/rondolab/MR-PRESSO",upgrade=c("never"), quiet=TRUE)
+    devtools::install_github("rondolab/MR-PRESSO",upgrade=c("never"), quiet=TRUE)
   }
   if (!"meta" %in% installed.packages()[,"Package"]) {
-    remotes::install_git("https://gitcode.com/guido-s/meta",upgrade=c("never"), quiet=TRUE)
+    devtools::install_github("guido-s/meta",upgrade=c("never"), quiet=TRUE)
   }
   if (!"TwoSampleMR" %in% installed.packages()[,"Package"]) {
-    remotes::install_git("https://gitcode.com/MRCIEU/TwoSampleMR", quiet = T, upgrade=c("never"))
+    devtools::install_github("MRCIEU/TwoSampleMR", quiet = T, upgrade=c("never"))
   }
-  if (!"MVMR" %in% installed.packages()[,"Package"]){
-    remotes::install_git("https://gitcode.com/WSpiller/MVMR", quiet = T, upgrade=c("never"))
-  }
+  # if (!"MVMR" %in% installed.packages()[,"Package"]){
+  #   remotes::install_git("https://gitcode.com/WSpiller/MVMR", quiet = T, upgrade=c("never"))
+  # }
   if (!"RadialMR" %in% installed.packages()[,"Package"]){
-    remotes::install_git("https://gitcode.com/WSpiller/RadialMR", quiet = T, upgrade=c("never"))
+    devtools::install_github("WSpiller/RadialMR", quiet = T, upgrade=c("never"))
   }
 
   if ("MendelR" %in% (.packages())) {
