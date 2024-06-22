@@ -5,6 +5,7 @@
 #'
 #' @examples install_mr()
 install_mr <- function(){
+  options (timeout = 60000) #下载超时时间
   packages <- c("usethis", "devtools", "remotes","data.table", "do", "eoffice", "epigraphdb", "metafor", "psych","ggplot2","gdata","textshaping","forestploter","progress", "future", "furrr", "hms")
 
   for (i in 1:length(packages)) {
